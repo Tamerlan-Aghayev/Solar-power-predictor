@@ -9,7 +9,7 @@ from sklearn.linear_model import LinearRegression, Ridge
 from sklearn.model_selection import GridSearchCV, train_test_split
 from sklearn.preprocessing import PolynomialFeatures
 def load_data():
-    df=pd.read_csv('BigML_Dataset_5f50a4cc0d052e40e6000034.csv')
+    df=pd.read_csv('https://www.kaggle.com/datasets/vipulgote4/solar-power-generation?select=BigML_Dataset_5f50a4cc0d052e40e6000034.csv')
     df=df[df['Power Generated']!=0]
     df.drop(['Day of Year', 'Year', 'Month', 'Day', 'First Hour of Period', 'Is Daylight','Average Wind Speed (Period)', 'Average Wind Direction (Day)'], axis=1, inplace=True)
     df['Average Barometric Pressure (Period)']=df['Average Barometric Pressure (Period)']*3386.39/100
